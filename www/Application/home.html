@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"/>
+    
+    <title>首页</title>
+    
+    <style>
+        *
+        {
+            //-webkit-tap-highlight-color: rgba(0,0,0,0);
+            text-decoration: none;
+        }
+    
+        html,body
+        {
+            -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+            -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+            -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+        }
+    
+        #div-a
+        {
+            background:#FBA;
+            color:#FFF;
+
+            border-radius: 25px 5px;
+        }
+
+
+    </style>
+    
+    <script type="text/javascript">
+        
+        function showResult(resultNumber)
+        {
+            //alert(resultNumber);
+            document.getElementById("result").innerText = resultNumber;
+        }
+    
+    </script>
+    
+</head>
+
+<body style="background:#CDE; color:#000">
+    <h1>Hello world</h1>
+    <div id="div-a">
+        <center>
+            
+            <br/>
+            <input type="button" value="点击进入下一个页面" onclick="native.pushViewControllerTitle('ThirdViewController','PushedFromJS');" />
+            <br/>
+            <br/>
+            
+            <input type="button" value="oc原生Alert" onclick="native.showAlertController()" />
+            <br/>
+            <br/>
+            
+            <a id="push" href="#" onclick="native.pushViewControllerTitle('SecondViewController','PushedFromJS');">
+                push to second ViewController
+            </a>
+            
+            <br/>
+            <br/>
+            
+        </center>
+    </div>
+
+    
+    
+</body>
+
+</html>
